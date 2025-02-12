@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png" type="image/png">
+    <style>
+        .menu-item {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-item:hover {
+            transform: scale(1.1);
+        }
+        .menu-item::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: purple;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-item:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-gray-100 via-blue-100 to-purple-100 text-gray-900">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Website Icon" class="w-8 h-8">
+            <h1 class="text-2xl font-bold text-blue-600">My Portfolio</h1>
+        </div>
+        <ul class="flex space-x-4">
+            <li><a href="#about" class="menu-item hover:text-purple-500">About</a></li>
+            <li><a href="#skills" class="menu-item hover:text-purple-500">Skills</a></li>
+            <li><a href="#projects" class="menu-item hover:text-purple-500">Projects</a></li>
+            <li><a href="#testimonials" class="menu-item hover:text-purple-500">Testimonials</a></li>
+            <li><a href="#resume" class="menu-item hover:text-purple-500">Resume</a></li>
+            <li><a href="#contact" class="menu-item hover:text-purple-500">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <h1 class="text-4xl font-bold">Hi! My Name is Jayesh Patel</h1>
+        <h2 class="text-3xl font-bold mt-2">Welcome to My Portfolio</h2>
+        <p class="mt-2 text-lg">I am a passionate developer</p>
+    </header>
+
+    <section id="skills" class="py-10 text-center">
+        <h2 class="text-3xl font-bold text-purple-600">Skills</h2>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div class="p-4 rounded-lg shadow-md bg-blue-200">HTML</div>
+            <div class="p-4 rounded-lg shadow-md bg-green-200">CSS</div>
+            <div class="p-4 rounded-lg shadow-md bg-yellow-200">JavaScript</div>
+            <div class="p-4 rounded-lg shadow-md bg-red-200">Tailwind CSS</div>
+            <div class="p-4 rounded-lg shadow-md bg-purple-200">React</div>
+            <div class="p-4 rounded-lg shadow-md bg-indigo-200">Node.js</div>
+            <div class="p-4 rounded-lg shadow-md bg-gray-200">Python</div>
+            <div class="p-4 rounded-lg shadow-md bg-pink-200">Machine Learning</div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-10 text-center bg-gray-200">
+        <h2 class="text-3xl font-bold text-blue-600">Projects</h2>
+        <div class="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://th.bing.com/th?id=OIP.uJMIj_FjyV3C_xii7Xka5wHaDO&w=350&h=152&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Project 1" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Project 1</h3>
+                <p class="mt-2">Description of project 1.</p>
+                <a href="#" class="text-blue-500 mt-2 inline-block">View Project</a>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://th.bing.com/th?id=OIP.xcJDuc_sNWfL6wzhPeW6FAHaF1&w=281&h=221&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Project 2" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Project 2</h3>
+                <p class="mt-2">Description of project 2.</p>
+                <a href="#" class="text-blue-500 mt-2 inline-block">View Project</a>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://ts2.mm.bing.net/th?id=OIP.PBPyZG32F20qvpBYi7b2fwHaF1&pid=15.1" alt="Project 3" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Project 3</h3>
+                <p class="mt-2">Description of project 3.</p>
+                <a href="#" class="text-blue-500 mt-2 inline-block">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-10 text-center">
+        <h2 class="text-3xl font-bold text-purple-600">Testimonials</h2>
+        <p class="mt-2">"Great developer with excellent skills!" - Client A</p>
+        <p class="mt-2">"Highly professional and delivers quality work!" - Client B</p>
+        <p class="mt-2">"A pleasure to work with, very knowledgeable!" - Client C</p>
+    </section>
+
+    <section id="resume" class="py-10 text-center bg-gray-200">
+        <h2 class="text-3xl font-bold text-blue-600">Resume</h2>
+        <a href="#" class="text-blue-500 mt-2 inline-block">Download Resume</a>
+    </section>
+
+    <footer class="text-center p-4 bg-gray-800 text-white">
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+        <div class="mt-2">
+            <a href="https://github.com/" target="_blank" class="mx-2">GitHub</a> |
+            <a href="https://linkedin.com/" target="_blank" class="mx-2">LinkedIn</a> |
+            <a href="https://twitter.com/" target="_blank" class="mx-2">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
